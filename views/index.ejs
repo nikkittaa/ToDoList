@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Application</title>
+    <link rel = "stylesheet" href = "/styles/main.css"/>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <div class = "flex-box">
+        <div class = "home box">
+            <h2>Personal Tasks</h2>
+                <form action = "/add" method = "POST">
+               <input type = "text" placeholder = "Add new task" name = "hometask" class = "input"/>
+               
+                <button class = "new" value = "home-list" name = "choice">+</button>
+              
+            </form>
+            <div  class = "listitem">
+                <% if(locals.task) { %>
+                    <% task[0].forEach( (t) => { %>
+                       
+                            <input type="checkbox" id  ="list" name="task"><span class ="checkbox"></span>
+                            <label for="task"> <%= t %></label><br>
+                    <% }); %>
+               <% } %>
+            </div>
+        </div>
+        <div class = "work box">
+            <h2>Work Tasks</h2>
+            
+            <form action = "/add" method = "POST">
+                <input type = "text" placeholder = "Add new task" name = "worktask" class = "input"/>
+              
+                 <button class = "new" value = "work-list" name = "choice">+</button>
+                
+             </form>
+             <div class = "listitem">
+                <% if(locals.task) { %>
+                    <% task[1].forEach( (t) => { %>
+                       
+                        
+                        <input type="checkbox" id  ="list" name="task"><span class ="checkbox"></span>
+                        <label for="task"> <%= t %></label><br>
+                    <% }); %>
+               <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
