@@ -1,0 +1,91 @@
+body{
+    background-color: rgba(128, 90, 213, 1);
+}
+
+.flex-box{
+    display: flex;
+}
+
+
+@media(max-width: 600px) { 
+    .flex-box {
+      flex-direction: column;
+      align-items: center;
+    }
+    .box{
+        width: 100%;
+        margin: 1%;
+    }
+  }
+
+.box{
+    background-color: white;
+    justify-content: space-between;
+    height: auto;
+    width: 40%;
+    border-radius: 2%;
+    margin-top:1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    
+}
+
+h1, h2{
+    font-size: 3.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+    padding: 2%
+}
+
+h2{
+    color: rgba(128, 90, 213, 1);
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+.new{
+    background-color: rgba(128, 90, 213, 1);
+    border-radius: 50%;
+    color: white;
+    border-width: 0;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;   
+    float: right; 
+    margin-right: 5%;
+}
+
+
+
+.add{
+    background-color: rgba(128, 90, 213, 1);
+    border-radius: 50%;
+    color: white;
+    border-width: 0;
+}
+
+.listitem{
+    font-size: 1.5rem;
+    margin: 3%;
+    text-align: left
+
+}
+
+.input {
+    color: rgba(128, 90, 213, 1);
+    border: 2px solid rgba(128, 90, 213, 1);
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    max-width: 190px;
+    
+   }
+   
+.input:active {
+    box-shadow: 2px 2px 15px rgba(128, 90, 213, 1) inset;
+}
+   
